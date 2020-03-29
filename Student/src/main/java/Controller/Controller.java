@@ -2,9 +2,6 @@ package Controller;
 
 import java.util.List;
 
-import javax.jms.Queue;
-
-import org.apache.activemq.ScheduledMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
@@ -21,8 +18,7 @@ import Service.Student_Service;
 import config.Configu;
 
 @RestController
-//@CrossOrigin(origins = "http://localhost:4200")
-@CrossOrigin(origins = "http://3.21.189.239:8080")
+@CrossOrigin
 @RequestMapping(value = "/api")
 public class Controller {
 
