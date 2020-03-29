@@ -3,6 +3,7 @@ package config;
 import static org.apache.commons.lang3.RandomStringUtils.randomAlphabetic;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import java.util.List;
 
@@ -43,7 +44,7 @@ public class StudentApplicationTests {
 		testStudent.setStudent_email(name+"@gmail.com");
 		testStudent.setStudent_branch("IT");
 		// verify save is success
-		assert(studentservice.saveStudent(testStudent));
+		assertTrue(studentservice.saveStudent(testStudent));
 	}
 	
 	@Test
@@ -60,7 +61,7 @@ public class StudentApplicationTests {
 		Student updStudent = students.get(students.size()-1);
 		updStudent.setStudent_branch("CSE");
 		// verify update is success
-		assert(studentservice.updateStudent(updStudent));
+		assertTrue(studentservice.updateStudent(updStudent));
 	}
 	
 	@Test
@@ -76,7 +77,7 @@ public class StudentApplicationTests {
 		List<Student> students = studentservice.getStudents();
 		Student delStudent = students.get(students.size()-1);
 		// verify delete is success
-		assert(studentservice.deleteStudent(delStudent));
+		assertTrue(studentservice.deleteStudent(delStudent));
 	}
 
 }
