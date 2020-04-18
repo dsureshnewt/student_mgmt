@@ -3,17 +3,12 @@ package Service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.annotation.EnableJms;
-import org.springframework.jms.annotation.JmsListener;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import DAO.Student_DAO;
 import Model.Student;
 
 @Service
-//@EnableJms
-@Transactional
 public class Student_Service_Imp implements Student_Service {
  
 	@Autowired

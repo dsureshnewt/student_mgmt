@@ -3,7 +3,6 @@ package Controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.jms.core.JmsTemplate;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,21 +14,14 @@ import org.springframework.web.bind.annotation.RestController;
 
 import Model.Student;
 import Service.Student_Service;
-import config.Configu;
 
 @RestController
 @CrossOrigin
 @RequestMapping(value = "/api")
 public class Controller {
-
-	@Autowired
-	private Configu config;
 	
 	@Autowired
 	private Student_Service studentservice;
-
-    @Autowired
-    private JmsTemplate jmsTemplate;
 
 	@PostMapping("save-student")
 	public boolean saveStudent(@RequestBody Student student) {
